@@ -37,12 +37,12 @@ enum TrainerIDFormat {
   SixDigit,
 }
 
-// public static class TrainerIDExtensions
+// class TrainerIDExtensions
 // {
 //     /// <summary>
 //     /// Detects the correct <see cref="TrainerIDFormat"/> to use for the input <see cref="tr"/>.
 //     /// </summary>
-//     public static TrainerIDFormat GetTrainerIDFormat(this ITrainerID tr) => tr switch
+//     static TrainerIDFormat GetTrainerIDFormat(ITrainerID tr) => tr switch
 //     {
 //         PKM { Format: <= 2 }  => SixteenBitSingle,
 //         PKM { Version: 0 } pk => pk.Format     >= 7 ? SixDigit : SixteenBit,

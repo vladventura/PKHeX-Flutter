@@ -1,3 +1,4 @@
+import 'package:pkhex_flutter/PKHex.Core/Editing/PKM/Interfaces/IFatefulEncounter.dart';
 import 'package:pkhex_flutter/PKHex.Core/Editing/PKM/Interfaces/ITrainerID32.dart';
 import 'package:pkhex_flutter/PKHex.Core/Editing/PKM/Interfaces/Metadata/IGameValueLimit.dart';
 import 'package:pkhex_flutter/PKHex.Core/Editing/PKM/Interfaces/Metadata/IGeneration.dart';
@@ -12,6 +13,8 @@ abstract class PKM
         IGeneration,
         IShiny,
         ILangNick,
-        IGameValueLimit {
-  void clearNickname() {}
+        IGameValueLimit,
+        IFatefulEncounter {
+  static List<String>? _extensions = EntityFileExtension.getExtensions();
+  List<String>? get extensions => _extensions;
 }
